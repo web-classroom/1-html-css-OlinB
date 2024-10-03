@@ -71,7 +71,10 @@ h1 {
 .horizontal-info {
     display: flex;
     flex-direction: row;
+}
 
+.horizontal-info > span {
+    white-space: nowrap;
 }
 
 .horizontal-info > span:not(:first-child)::before {
