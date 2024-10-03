@@ -1,3 +1,17 @@
+:root {
+    --gray-100: #F3F4F6;
+    --gray-200: #E5E7EB;
+    --gray-400: #9CA3AF;
+}
+
+/*
+Je sais qu'on aime pas les styles globaux, mais on travaille toujours avec ça au travail
+*/
+* {
+    box-sizing: border-box;
+}
+
+
 html,
 body {
     height: 100%;
@@ -11,3 +25,190 @@ h5,
 h6 {
     margin: 0;
 }
+
+h1 {
+    font-size: 3rem;
+    font-family: "Noto Sans", sans-serif;
+    line-height: 1.25;
+    font-weight: bold;
+}
+
+.subtitle-1 {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.body-1{
+    font-family: "Noto Sans", sans-serif;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.subtitle-2 {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: bold;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.body-2{
+    font-family: "Noto Sans", sans-serif;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.overline {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+.horizontal-info {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.horizontal-info > span:not(:first-child)::before {
+    content: "•";
+    margin: 0 8px;
+}
+
+#main-container {
+    display: grid;
+    grid-template-columns: auto 330px;
+    grid-template-rows: auto 80px;
+    width: 100%;
+    height: 100%;
+}
+
+#main-content{
+    padding: 86px;
+    overflow: auto;
+}
+
+#playlist-header {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: flex-end;
+}
+
+#playlist-header > img {
+    width: 250px;
+    height: 250px;
+}
+
+#playlist-header > .aside {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#playlist-info{
+    display: flex;
+    flex-direction: column;
+}
+
+#playlist-tracks{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 48px 16px;
+}
+
+#playlist-tracks .track{
+    display: flex;
+    flex-direction: column;
+}
+
+#queue {
+    background-color: var(--gray-100);
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    border-left: 1px solid var(--gray-200);
+}
+
+#queue-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#queue-content .queue-empty {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    color: var(--gray-400);
+}
+
+#queue-content .queue-empty > p {
+    display: block;
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    left: 50%;
+}
+
+#player {
+    overflow: hidden;
+    grid-column: span 2;
+    border-top: 1px solid var(--gray-200);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#playing-now {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+#playing-now img{
+    height: 100%;
+    width: auto;
+    aspect-ratio: 1;
+}
+
+#playing-track-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#controls {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+}
+
+#controls img {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+#logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 16px;
+}
+
+#logo {
+    height: 30px;
+    width: 150px;
+}
+
+
