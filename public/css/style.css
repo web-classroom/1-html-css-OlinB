@@ -150,6 +150,7 @@ h1 {
 #queue-content .queue-empty {
     height: 100%;
     width: 100%;
+    /* Oui j'aurais pu utiliser un calc sur l'enfant, mais c'est moins moche comme ça */
     position: relative;
     color: var(--gray-400);
 }
